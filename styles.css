@@ -370,6 +370,12 @@ width: 100%;
 position: absolute;
 top:-3rem;
 }
+.arrow3{
+  position: absolute;
+  right: 1rem;
+  bottom: 50%;
+  pointer-events: none;
+}
 #about>div>div, #about>div, #about{
   width: 100%;
 }
@@ -391,7 +397,10 @@ cursor: pointer;
 display: block;
 animation: bounce 1.5s infinite;
 }
-
+.arrow3>picture{
+  display: block;
+  animation: bar 1.5s infinite;
+}
 /* Bounce Animation */
 @keyframes bounce {
 0%, 100% {
@@ -405,7 +414,14 @@ animation: bounce 1.5s infinite;
 display: block;
 animation: move 1.5s infinite;
 }
-
+@keyframes bar {
+  0%, 100% {
+      transform: translatex(7px) ;
+  }
+  50% {
+      transform: translatex(0px) ;
+  }
+  }
 
 @keyframes move {
 0%, 100% {
@@ -487,6 +503,7 @@ animation: jello-horizontal 0.9s linear infinite ;
 }
 
 .cardCon {
+  position: relative;
   justify-content: space-evenly;
   right: 1rem;
   width: 100%;
@@ -586,5 +603,4 @@ animation: jello-horizontal 0.9s linear infinite ;
 i{
   font-weight:bold;
   text-decoration: wavy;
-  text-shadow: 0 0 1px var(--text-header);
 }
