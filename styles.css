@@ -349,6 +349,7 @@ font-family: Arial, sans-serif;
 }
 
 #services{
+  background-color: var(--primary-color);
   width: 100%;
   margin-top: 1rem;
   margin-bottom: -1rem;
@@ -359,22 +360,40 @@ font-family: Arial, sans-serif;
 
 #mission>div{
 gap: 1rem;
+cursor: auto;
 }
 #mission>img{
 border-radius: 5px;
 width: 100%;
-
 }
 
 .arrow2{
+box-sizing: border-box;
 position: absolute;
 top:-3rem;
 }
+#arrowS{
+  cursor: pointer;
+}
 .arrow3{
-  position: absolute;
-  right: 1rem;
-  bottom: 50%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  position:sticky;
+  right: 2rem;
+  margin-top: 20%;
   pointer-events: none;
+}
+.arrow4{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position:sticky;
+  right: 95vw;
+  margin-top: 20%;
+  pointer-events: none;
+}
+.arrow4>picture{
+  display: block;
+  animation: bar2 1.5s infinite;
 }
 #about>div>div, #about>div, #about{
   width: 100%;
@@ -422,6 +441,14 @@ animation: move 1.5s infinite;
       transform: translatex(0px) ;
   }
   }
+  @keyframes bar2 {
+    0%, 100% {
+        transform: translatex(7px) rotate(180deg) ;
+    }
+    50% {
+        transform: translatex(0px) rotate(180deg) ;
+    }
+    }
 
 @keyframes move {
 0%, 100% {
@@ -498,9 +525,7 @@ animation: jello-horizontal 0.9s linear infinite ;
 }
 */
   
-.spacer {
-  flex: 0 0 1rem; 
-}
+
 
 .cardCon {
   position: relative;
@@ -516,8 +541,9 @@ animation: jello-horizontal 0.9s linear infinite ;
   flex-wrap: nowrap;
   padding: 1rem;
   height: 100vh;
-  margin: 0;
+  margin-left: 1rem;
   gap: 1vw;
+  background-color: var(--primary-color);
 }
 .card {
   
@@ -560,7 +586,16 @@ animation: jello-horizontal 0.9s linear infinite ;
   color: #dcdcdc;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+  .arrow3, .arrow4{
+    margin-top: 36%;
+  }
+  .arrow3{
+    right: 2rem;
+  }
+  .arrow4{
+    right: 96vw ;
+  }
   .card {
     overflow: visible;
     scroll-snap-align: start; 

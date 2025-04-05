@@ -16,6 +16,31 @@ window.onload = function(){ window.location.href ="#navHead";}
 document.querySelector(".arrow").addEventListener("click", function() {
     document.getElementById("services").scrollIntoView({ behavior: "smooth" });
 });
-document.querySelector(".arrow2").addEventListener("click", function() {
+document.querySelector("#arrowS").addEventListener("click", function() {
     document.getElementById("arrow2").scrollIntoView({ behavior: "smooth" });
 });
+   
+
+        const cardGrid = document.querySelector('.cardCon');
+        const arrowLeft = document.querySelector('.arrow4');
+        const arrowRight = document.querySelector('.arrow3');
+      
+        cardGrid.addEventListener('scroll',function () {
+          // Near the very left
+          if (cardGrid.scrollLeft < 80) {
+            arrowLeft.style.opacity = '0';
+            arrowRight.style.opacity = '1';
+          } else if (cardGrid.scrollLeft + cardGrid.clientWidth >= cardGrid.scrollWidth - 80) {
+            // Fully scrolled to the right
+            arrowLeft.style.opacity = '1';
+            arrowRight.style.opacity = '0';
+          } else {
+            // In the middle, show both arrows (adjust as desired)
+            arrowLeft.style.opacity = '1';
+            arrowRight.style.opacity = '1';
+          }
+        });
+      
+     
+ 
+  
