@@ -41,6 +41,18 @@ document.querySelector("#arrowS").addEventListener("click", function() {
           }
         });
       
-     
- 
-  
+
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+    if(card.className.includes("flipped")){
+        card.querySelector('.card-text>p').style.opacity = 1;
+        card.querySelector('.card-image').style.opacity = 0;
+        card.querySelector('.card-text>h5').style.opacity = 0;
+    }else {  card.querySelector('.card-text>p').style.opacity = 0;
+             card.querySelector('.card-image').style.opacity = 1;
+             card.querySelector('.card-text>h5').style.opacity = 1;
+    }
+    });
+});
+          
