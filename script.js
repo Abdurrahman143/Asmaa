@@ -6,7 +6,7 @@ function toggoleMenu (){
 }
 
 function mail(){
-    window.location.href = "mailto:ibrahim.jumah0905@gmail.com";
+    window.location.href = "mailto:asmaa.redovisning@gmail.com";
 }
 function call(){
     window.location.href = "tel:+46707576351";
@@ -20,6 +20,12 @@ document.querySelector("#arrowS").addEventListener("click", function() {
     document.getElementById("arrow2").scrollIntoView({ behavior: "smooth" });
 });
    
+document.querySelector("#arrow3").addEventListener("click", function() {
+    document.querySelector(".cardCon").scrollBy( {left: 400, behavior: 'smooth'});
+});
+document.querySelector("#arrow4").addEventListener("click", function() {
+    document.querySelector(".cardCon").scrollBy( {left: -400, behavior: 'smooth'});
+});
 
         const cardGrid = document.querySelector('.cardCon');
         const arrowLeft = document.querySelector('.arrow4');
@@ -40,7 +46,8 @@ document.querySelector("#arrowS").addEventListener("click", function() {
             arrowRight.style.opacity = '1';
           }
         });
-      
+
+        
 
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', () => {
