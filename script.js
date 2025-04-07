@@ -48,7 +48,7 @@ document.querySelector("#arrow4").addEventListener("click", function() {
         });
 
         
-
+/*
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', () => {
     card.classList.toggle('flipped');
@@ -62,4 +62,4 @@ document.querySelectorAll('.card').forEach(card => {
     }
     });
 });
-          
+*/
