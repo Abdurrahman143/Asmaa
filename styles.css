@@ -735,28 +735,34 @@ i{
 }
 @keyframes greenShadow {
   0%, 100% {
-    box-shadow: 0 0 0 3px rgba(0,119, 238); /* red, no extra spread */
+    box-shadow: 0 0 0 3px rgba(0,119, 238),
+    0 0 6px 5px rgb(0,119, 238); /* red, no extra spread */
   }
 
   50% {
-    box-shadow: 0 0 0 3px #06c766; /* yellow glow */
+    box-shadow: 0 0 0 3px #06c766,
+    0 0 6px 5px #06c766; /* yellow glow */
 }
 }
 @keyframes blueShadow {
   0%, 100% {
-    box-shadow: 0 0 0 3px #e522ff; /* red, no extra spread */
+    box-shadow: 0 0 0 3px #e522ff,
+    0 0 6px 5px #e522ff; /* red, no extra spread */
   }
 
   50% {
-    box-shadow: 0 0 0 3px #910155; /* yellow glow */
+    box-shadow: 0 0 0 3px #910155,
+    0 0 6px 5px #910155; /* yellow glow */
 }
 }
 @keyframes purpleShadow {
   0%, 100% {
-    box-shadow: 0 0 0 3px #eea300; /* red, no extra spread */
+    box-shadow: 0 0 0 3px #eea300,
+                0 0 6px 5px #eea300 ; /* red, no extra spread */
   }
   50% {
-    box-shadow: 0 0 0 3px #ee7500; /* yellow glow */
+    box-shadow: 0 0 0 3px #ee7500,
+    0 0 6px 5px #ee7500; /* yellow glow */
 }
 }
 .Green{
@@ -837,7 +843,8 @@ i{
   animation: rotate 3s ease-in-out infinite;
 }
 .Green>.sub{
-  background: linear-gradient(135deg, rgba(0,119, 238), #06c766);
+
+  background: linear-gradient(135deg, rgba(0,119, 238), rgb(6, 199, 102));
 }
 .Blue>.sub{
   background: linear-gradient(135deg, #c905e3, #cf087c);
